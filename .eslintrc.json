@@ -1,0 +1,20 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "extends": ["eslint:recommended"],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2015
+  },
+  "plugins": ["prettier"],
+  "globals": {
+    "process": true
+  },
+  "ignorePatterns": [".eslintrc.js", "**/node_modules/**"],
+  "rules": {
+    "no-unused-vars": "error"
+  }
+}

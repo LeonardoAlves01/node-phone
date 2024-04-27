@@ -1,0 +1,20 @@
+{
+  "name": "phone",
+  "version": "1.0.0",
+  "description": "Uma biblioteca desenvolvida para validar e formatar telefones brasileiros de maneira simples e eficaz.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Leonardo Elias Alves",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "git-commit-msg-linter": "^5.0.7",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5"
+  }
+}
