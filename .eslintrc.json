@@ -7,7 +7,7 @@
   "extends": ["eslint:recommended"],
   "parserOptions": {
     "sourceType": "module",
-    "ecmaVersion": 2015
+    "ecmaVersion": "latest"
   },
   "plugins": ["prettier"],
   "globals": {
@@ -16,5 +16,13 @@
   "ignorePatterns": [".eslintrc.js", "**/node_modules/**"],
   "rules": {
     "no-unused-vars": "error"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["tests/**/*"],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
 }
