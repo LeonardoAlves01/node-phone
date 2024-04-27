@@ -1,7 +1,7 @@
-const validate = require("./validate");
-const format = require("./format");
+const validatePhoneNumber = require("./validate");
+const formatPhoneNumber = require("./format");
 
 module.exports = {
-  validate,
-  format,
+  validatePhoneNumber,
+  formatPhoneNumber,
 };

@@ -1,14 +1,19 @@
-const validate = require("./validate");
+const validatePhoneNumber = require("./validate");
 
 /**
- * @param {string} value número de telefone
+ * @param {string} phoneNumber Phone number to format
  */
-module.exports = function (value) {
-  value = validate(value);
-  if (!value) return value;
+const formatPhoneNumber = (phoneNumber) => {
+  const validatedData = validatePhoneNumber(phoneNumber);
+  if (!validatedData) return validatedData;
 
-  if (value.length === 10)
-    return `(${value.substring(0, 2)}) ${value.substring(2, 6)}-${value.substring(6, 11)}`;
+  const formattedDDDNumber = validatedData.substring(0, 2);
+  const formattedNumber =
+    validatedData.length === 10
+      ? `(${formattedDDDNumber}) ${validatedData.substring(2, 6)}-${validatedData.substring(6, 11)}`
+      : `(${formattedDDDNumber}) ${validatedData.substring(2, 7)}-${validatedData.substring(7, 12)}`;
 
-  return `(${value.substring(0, 2)}) ${value.substring(2, 7)}-${value.substring(7, 12)}`;
+  return formattedNumber;
 };
+
+module.exports = formatPhoneNumber;
